@@ -12,6 +12,15 @@ basic.forever(function () {
     mooncar.Filllight(mooncar.Switch.Open)
 })
 basic.forever(function () {
+    basic.showLeds(`
+        # # . . .
+        . . # # .
+        # . . . #
+        . # # . .
+        . . . # #
+        `)
+})
+basic.forever(function () {
     if (mooncar.LineFollowerSensor() == 0) {
         mooncar.MoonCarGo(mooncar.Direction.direct1, 30)
     } else if (mooncar.LineFollowerSensor() == 1) {
